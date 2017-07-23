@@ -5,17 +5,66 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
+import {  TYPO, COLOR } from 'react-native-material-design';
+
+import { Container, Content, Card, CardItem, Left, Body, Thumbnail, Button, Icon, Right, List, ListItem, Separator } from 'native-base';
+
+
 class triangleView extends Component {
+
+    openView(name, title) {
+      this.props.navigator.push({
+          name: name,
+          title: title,
+          passProps: {}
+      })
+    }
+
     render() {
         return (
             <View style={styles.container}>
-             
-                <Text style={styles.welcome}>
-                    Triangle View
-                </Text>
+              <Container>
+                <Content>
+                  <List>
+                    <ListItem itemHeader first>
+                      <Text>Seleccione una opción</Text>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('equilateralTriangleView', 'Triángulo Equilátero')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Equilátero</Text>
+                          {/*<Text note>Todos los lados miden lo mismo</Text>*/}
+                      </Body>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('isoscelesTriangleView', 'Triángulo Isósceles')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Isósceles</Text>
+                      </Body>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('scaleneTriangleView', 'Triángulo Escaleno')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Escaleno</Text>
+                      </Body>
+                    </ListItem>
+                  </List>
+                </Content>
+              </Container>
+                  {/*<Card>
+                    <CardItem>
+                        <Left>
+                          <Image style={styles.image}  source={require('../../images/figures/circle.png')} />
+                        </Left>
+                        <Right>
+                          <Text style={[TYPO.paperFontDisplay1, COLOR.paperGrey900]}>Fórmulas</Text>
+                        </Right>
+                    </CardItem>
+                  </Card>*/}
             </View>
         );
     }
@@ -24,9 +73,17 @@ class triangleView extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // padding: 20,
+    paddingTop:70,
+    // justifyContent: 'space-between',
+    // alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  thumbnail: {
+    height: 100,
+    width: 100,
+    alignSelf: 'center',
+    marginRight: 10
   },
   welcome: {
     fontSize: 20,

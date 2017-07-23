@@ -23,6 +23,9 @@ const Toolbar = require('./src/components/Toolbar');
 const Menu = require('./src/components/Menu');
 const CircleView = require('./src/components/figures/circleView');
 const TriangleView = require('./src/components/figures/triangleView');
+const EquilateralTriangleView = require('./src/components/figures/equilateralTriangleView');
+const ScaleneTriangleView = require('./src/components/figures/scaleneTriangleView');
+const IsoscelesTriangleView = require('./src/components/figures/isoscelesTriangleView');
 const SquareView = require('./src/components/figures/squareView');
 const CircleAreaView = require('./src/components/figures/formulas/circle/circleAreaView');
 const CirclePerimeterView = require('./src/components/figures/formulas/circle/circlePerimeterView');
@@ -106,6 +109,18 @@ export default class Geometriapp extends Component {
       case 'squareDiagonalView':
         return (
           <SquareDiagonalView {...route.props} navigator={navigator} route={route}></SquareDiagonalView>
+        );
+      case 'equilateralTriangleView':
+        return (
+          <EquilateralTriangleView {...route.props} navigator={navigator} route={route}></EquilateralTriangleView>
+        );
+      case 'scaleneTriangleView':
+        return (
+          <ScaleneTriangleView {...route.props} navigator={navigator} route={route}></ScaleneTriangleView>
+        );
+      case 'isoscelesTriangleView':
+        return (
+          <IsoscelesTriangleView {...route.props} navigator={navigator} route={route}></IsoscelesTriangleView>
         );
     }
   }
