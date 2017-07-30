@@ -17,7 +17,7 @@ import {
   StatusBar
 } from 'react-native';
 
-//components
+//general views
 const Welcome = require('./src/components/welcomeView');
 const Toolbar = require('./src/components/Toolbar');
 const Menu = require('./src/components/Menu');
@@ -27,12 +27,25 @@ const EquilateralTriangleView = require('./src/components/figures/equilateralTri
 const ScaleneTriangleView = require('./src/components/figures/scaleneTriangleView');
 const IsoscelesTriangleView = require('./src/components/figures/isoscelesTriangleView');
 const SquareView = require('./src/components/figures/squareView');
+//formulas
+//circle
 const CircleAreaView = require('./src/components/figures/formulas/circle/circleAreaView');
 const CirclePerimeterView = require('./src/components/figures/formulas/circle/circlePerimeterView');
 const CircleDiameterView = require('./src/components/figures/formulas/circle/circleDiameterView');
+//square
 const SquareAreaView = require('./src/components/figures/formulas/square/squareAreaView');
 const SquarePerimeterView = require('./src/components/figures/formulas/square/squarePerimeterView');
 const SquareDiagonalView = require('./src/components/figures/formulas/square/squareDiagonalView');
+//triangle
+const EquilateralTriangleAreaView = require('./src/components/figures/formulas/triangle/equilateral/equilateralTriangleAreaView');
+const EquilateralTrianglePerimeterView = require('./src/components/figures/formulas/triangle/equilateral/equilateralTrianglePerimeterView');
+const EquilateralTriangleAltitudeView = require('./src/components/figures/formulas/triangle/equilateral/equilateralTriangleAltitudeView');
+const IsoscelesTriangleAreaView = require('./src/components/figures/formulas/triangle/isosceles/isoscelesTriangleAreaView');
+const IsoscelesTrianglePerimeterView = require('./src/components/figures/formulas/triangle/isosceles/isoscelesTrianglePerimeterView');
+const IsoscelesTriangleAltitudeView = require('./src/components/figures/formulas/triangle/isosceles/isoscelesTriangleAltitudeView');
+const ScaleneTriangleAreaView = require('./src/components/figures/formulas/triangle/scalene/scaleneTriangleAreaView');
+const ScaleneTrianglePerimeterView = require('./src/components/figures/formulas/triangle/scalene/scaleneTrianglePerimeterView');
+const ScaleneTriangleAltitudeView = require('./src/components/figures/formulas/triangle/scalene/scaleneTriangleAltitudeView');
 
 //class
 export default class Geometriapp extends Component {
@@ -121,6 +134,42 @@ export default class Geometriapp extends Component {
       case 'isoscelesTriangleView':
         return (
           <IsoscelesTriangleView {...route.props} navigator={navigator} route={route}></IsoscelesTriangleView>
+        );
+      case 'equilateralTriangleAreaView':
+        return (
+          <EquilateralTriangleAreaView {...route.props} navigator={navigator} route={route}></EquilateralTriangleAreaView>
+        );
+      case 'equilateralTrianglePerimeterView':
+        return (
+          <EquilateralTrianglePerimeterView {...route.props} navigator={navigator} route={route}></EquilateralTrianglePerimeterView>
+        );
+      case 'equilateralTriangleAltitudeView':
+        return (
+          <EquilateralTriangleAltitudeView {...route.props} navigator={navigator} route={route}></EquilateralTriangleAltitudeView>
+        );
+      case 'isoscelesTriangleAreaView':
+        return (
+          <IsoscelesTriangleAreaView {...route.props} navigator={navigator} route={route}></IsoscelesTriangleAreaView>
+        );
+      case 'isoscelesTrianglePerimeterView':
+        return (
+          <IsoscelesTrianglePerimeterView {...route.props} navigator={navigator} route={route}></IsoscelesTrianglePerimeterView>
+        );
+      case 'isoscelesTriangleAltitudeView':
+        return (
+          <IsoscelesTriangleAltitudeView {...route.props} navigator={navigator} route={route}></IsoscelesTriangleAltitudeView>
+        );
+      case 'scaleneTriangleAreaView':
+        return (
+          <ScaleneTriangleAreaView {...route.props} navigator={navigator} route={route}></ScaleneTriangleAreaView>
+        );
+      case 'scaleneTrianglePerimeterView':
+        return (
+          <ScaleneTrianglePerimeterView {...route.props} navigator={navigator} route={route}></ScaleneTrianglePerimeterView>
+        );
+      case 'scaleneTriangleAltitudeView':
+        return (
+          <ScaleneTriangleAltitudeView {...route.props} navigator={navigator} route={route}></ScaleneTriangleAltitudeView>
         );
     }
   }

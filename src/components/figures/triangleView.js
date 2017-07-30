@@ -34,20 +34,20 @@ class triangleView extends Component {
                       <Text>Seleccione una opción</Text>
                     </ListItem>
                     <ListItem onPress={() => this.openView('equilateralTriangleView', 'Triángulo Equilátero')}>
-                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/equilateralTriangle.png')} />
                       <Body>
                           <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Equilátero</Text>
                           {/*<Text note>Todos los lados miden lo mismo</Text>*/}
                       </Body>
                     </ListItem>
                     <ListItem onPress={() => this.openView('isoscelesTriangleView', 'Triángulo Isósceles')}>
-                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/isoscelesTriangle.png')} />
                       <Body>
                           <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Isósceles</Text>
                       </Body>
                     </ListItem>
                     <ListItem onPress={() => this.openView('scaleneTriangleView', 'Triángulo Escaleno')}>
-                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/circle.png')} />
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/scaleneTriangle.png')} />
                       <Body>
                           <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Triángulo Escaleno</Text>
                       </Body>
