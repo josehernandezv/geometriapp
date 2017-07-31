@@ -8,7 +8,8 @@ import {
   Image,
   PropTypes,
   View,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableWithoutFeedback
 } from 'react-native';
 
 import { 
@@ -19,9 +20,90 @@ import {
     TYPO 
 } from 'react-native-material-design';
 
+import { 
+    List,
+    ListItem,
+    Left
+} from 'native-base';
+
 import IIcon from 'react-native-vector-icons/Ionicons';
+import GIcon from './GIcon';
 import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+
+
+const Data = [
+  {
+    view: 'CircleView',
+    title: 'Círculo',
+    icon: 'circle',
+  },
+  {
+    view: 'TriangleView',
+    title: 'Triángulo',
+    icon: 'triangle',
+  },
+  {
+    view: 'SquareView',
+    title: 'Cuadrado',
+    icon: 'square',
+  },
+  {
+    view: 'RectangleView',
+    title: 'Rectángulo',
+    icon: 'rectangle',
+  },
+  {
+    view: 'RhombusView',
+    title: 'Rombo',
+    icon: 'rhombus',
+  },
+  {
+    view: 'OvalView',
+    title: 'Óvalo',
+    icon: 'oval',
+  },
+  {
+    view: 'TrapezoidView',
+    title: 'Trapecio',
+    icon: 'trapezoid',
+  },
+  {
+    view: 'ParallelogramView',
+    title: 'Paralelograma',
+    icon: 'parallelogram',
+  },
+  {
+    view: 'PentagonView',
+    title: 'Pentágono',
+    icon: 'pentagon',
+  },
+  {
+    view: 'HexagonView',
+    title: 'Hexágono',
+    icon: 'hexagon',
+  },
+  {
+    view: 'HeptagonView',
+    title: 'Heptágono',
+    icon: 'heptagon',
+  },
+  {
+    view: 'OctagonView',
+    title: 'Octágono',
+    icon: 'octagon',
+  },
+  {
+    view: 'NonagonView',
+    title: 'Nonágono',
+    icon: 'nonagon',
+  },
+  {
+    view: 'DecagonView',
+    title: 'Decágono',
+    icon: 'decagon',
+  },
+];
 
 class Menu extends Component {
 
@@ -82,11 +164,31 @@ class Menu extends Component {
                         <Text style={[ COLOR.paperBlueGrey800, TYPO.paperFontHeadline, styles.headline]}>Figuras Geométricas</Text>
                     </View>
                 </Drawer.Header>
-                <View style={styles.container}>
+                {/*<List
+                        dataArray={Data} renderRow={data =>
+                        <ListItem button noBorder onPress={() => this.changeView(data.view, data.title)} >
+                            <Left>
+                                <GIcon name={data.icon} size={24} style={this.getIconStyle(data.view)}/>
+                                <Text style={[ this.getTextColor(data.view), TYPO.paperFontSubhead, styles.text]}>{data.title}</Text>                                
+                            </Left>
+                        </ListItem>}
+                        
+                    />*/}
+                {Data.map((data) => 
+                        <ListItem button noBorder key={data.view} onPress={() => this.changeView(data.view, data.title)} >
+                            <Left>
+                                <GIcon name={data.icon} size={24} style={this.getIconStyle(data.view)}/>
+                                <Text style={[ this.getTextColor(data.view), TYPO.paperFontSubhead, styles.text]}>{data.title}</Text>                                
+                            </Left>
+                        </ListItem>
+                            
+                )}
+
+                {/*<View style={styles.container}>
 
                     <TouchableHighlight underlayColor={'transparent'} onPress={() => this.changeView('CircleView', 'Círculo')}>
                         <View style={styles.row}>
-                            <MCIcon name="checkbox-blank-circle-outline" size={24} 
+                            <GIcon name="circle" size={24} 
                              style={this.getIconStyle('CircleView')}/>
                             <Text style={[ this.getTextColor('CircleView'), TYPO.paperFontBody1, styles.text]}>Círculo</Text>
                         </View>
@@ -94,7 +196,7 @@ class Menu extends Component {
 
                     <TouchableHighlight underlayColor={'transparent'} onPress={() => this.changeView('TriangleView', 'Triángulo')}>
                         <View style={styles.row}>
-                            <MCIcon name="triangle-outline" size={24} 
+                            <GIcon name="triangle" size={24} 
                              style={this.getIconStyle('TriangleView')}/>
                             <Text style={[ this.getTextColor('TriangleView'), TYPO.paperFontBody1, styles.text]}>Triángulo</Text>
                         </View>
@@ -102,13 +204,13 @@ class Menu extends Component {
 
                     <TouchableHighlight underlayColor={'transparent'} onPress={() => this.changeView('SquareView', 'Cuadrado')}>
                         <View style={styles.row}>
-                            <MCIcon name="crop-square" size={24} 
+                            <GIcon name="square" size={24} 
                              style={this.getIconStyle('SquareView')}/>
                             <Text style={[ this.getTextColor('SquareView'), TYPO.paperFontBody1, styles.text]}>Cuadrado</Text>
                         </View>
                     </TouchableHighlight>
 
-                </View>
+                </View>*/}
                 
             </Drawer>
         );
@@ -126,9 +228,9 @@ const styles = StyleSheet.create({
         fontWeight: '600'
     },
     text: {
-        marginTop: 16,
-        marginBottom: 16,
-        paddingLeft: 16,
+        // marginTop: 16,
+        // marginBottom: 16,
+        marginLeft: 30,
         fontWeight: '600'
     },
     row: {
@@ -146,11 +248,13 @@ const styles = StyleSheet.create({
     },
     icons: {
         color: "#546e7a",
-        margin: 16
+        // margin: 16,
+        // marginLeft: 0
     }
     ,iconActive: {
         color: "#4285f4",
-        margin: 16
+        // margin: 16,
+        // marginLeft: 0
     }
 });
 
