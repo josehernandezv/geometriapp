@@ -20,7 +20,7 @@ import {
     Content
 } from 'native-base';
 
-class squareView extends Component {
+class ovalView extends Component {
 
     openView(name, title) {
       this.props.navigator.push({
@@ -35,39 +35,41 @@ class squareView extends Component {
             <Container>
                 <Content>
                     <View style={styles.container}>
-                        <Image style={styles.image}  source={require('../../images/figures/square.png')} />
+                        <Image style={styles.image}  source={require('../../images/figures/oval.png')} />
                         <View style={styles.formulas}>
                         <Text style={[TYPO.paperFontDisplay1, COLOR.paperGrey900]}>Fórmulas</Text>   
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareAreaView', 'Área del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('ovalAreaView', 'Área del óvalo')}>
                             <View style={styles. formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>l²</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>π x r1 x r2</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squarePerimeterView', 'Perímetro del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('ovalPerimeterView', 'Perímetro del óvalo')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>4 x l</Text>   
+                                <Text style={[TYPO.paperFontSubhead, COLOR.paperGrey900]}>π x [3 x (r1 + r2) </Text>   
+                                <Text style={[TYPO.paperFontSubhead, COLOR.paperGrey900]}>- √((3r1 + r2)(r1 + 3r2))]</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareDiagonalView', 'Diagonal del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('ovalDiagonalView', 'Diámetros del óvalo')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
-                                <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diagonal:</Text>   
+                                <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diámetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√2  x l</Text>   
+                                <Text style={[TYPO.paperFontSubhead, COLOR.paperGrey900]}>D1 = 2  x r1</Text>  
+                                <Text style={[TYPO.paperFontSubhead, COLOR.paperGrey900]}>D2 = 2  x r2</Text>  
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 200,
-    width: 200,
+    width: 300,
     alignSelf: 'center'
   },
   formulas:{
@@ -111,4 +113,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = squareView;
+module.exports = ovalView;

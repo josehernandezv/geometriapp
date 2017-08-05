@@ -20,7 +20,7 @@ import {
     Content
 } from 'native-base';
 
-class squareView extends Component {
+class rectangleView extends Component {
 
     openView(name, title) {
       this.props.navigator.push({
@@ -35,39 +35,39 @@ class squareView extends Component {
             <Container>
                 <Content>
                     <View style={styles.container}>
-                        <Image style={styles.image}  source={require('../../images/figures/square.png')} />
+                        <Image style={styles.image}  source={require('../../images/figures/rectangle.png')} />
                         <View style={styles.formulas}>
                         <Text style={[TYPO.paperFontDisplay1, COLOR.paperGrey900]}>Fórmulas</Text>   
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareAreaView', 'Área del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('rectangleAreaView', 'Área del rectángulo')}>
                             <View style={styles. formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>l²</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>a x b</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squarePerimeterView', 'Perímetro del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('rectanglePerimeterView', 'Perímetro del rectángulo')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>4 x l</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>2 x (a + b)</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareDiagonalView', 'Diagonal del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('rectangleDiagonalView', 'Diagonal del rectángulo')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diagonal:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√2  x l</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√(a² + b²)</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 200,
-    width: 200,
+    width: 300,
     alignSelf: 'center'
   },
   formulas:{
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = squareView;
+module.exports = rectangleView;

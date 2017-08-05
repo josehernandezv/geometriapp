@@ -27,6 +27,18 @@ const EquilateralTriangleView = require('./src/components/figures/equilateralTri
 const ScaleneTriangleView = require('./src/components/figures/scaleneTriangleView');
 const IsoscelesTriangleView = require('./src/components/figures/isoscelesTriangleView');
 const SquareView = require('./src/components/figures/squareView');
+const RectangleView = require('./src/components/figures/rectangleView');
+const RhombusView = require('./src/components/figures/rhombusView');
+const OvalView = require('./src/components/figures/ovalView');
+const TrapezoidView = require('./src/components/figures/trapezoidView');
+const ParallelogramView = require('./src/components/figures/parallelogramView');
+const PentagonView = require('./src/components/figures/pentagonView');
+const HexagonView = require('./src/components/figures/hexagonView');
+// const HeptagonView = require('./src/components/figures/heptagonView');
+// const OctagonView = require('./src/components/figures/octagonView');
+// const NonagonView = require('./src/components/figures/nonagonView');
+// const DecagonView = require('./src/components/figures/decagonView');
+
 //formulas
 //circle
 const CircleAreaView = require('./src/components/figures/formulas/circle/circleAreaView');
@@ -170,6 +182,34 @@ export default class Geometriapp extends Component {
       case 'scaleneTriangleAltitudeView':
         return (
           <ScaleneTriangleAltitudeView {...route.props} navigator={navigator} route={route}></ScaleneTriangleAltitudeView>
+        );
+      case 'RectangleView':
+        return (
+          <RectangleView {...route.props} navigator={navigator} route={route}></RectangleView>
+        );
+      case 'RhombusView':
+        return (
+          <RhombusView {...route.props} navigator={navigator} route={route}></RhombusView>
+        );
+      case 'OvalView':
+        return (
+          <OvalView {...route.props} navigator={navigator} route={route}></OvalView>
+        );
+      case 'TrapezoidView':
+        return (
+          <TrapezoidView {...route.props} navigator={navigator} route={route}></TrapezoidView>
+        );
+      case 'ParallelogramView':
+        return (
+          <ParallelogramView {...route.props} navigator={navigator} route={route}></ParallelogramView>
+        );
+      case 'PentagonView':
+        return (
+          <PentagonView {...route.props} navigator={navigator} route={route}></PentagonView>
+        );
+      case 'HexagonView':
+        return (
+          <HexagonView {...route.props} navigator={navigator} route={route}></HexagonView>
         );
     }
   }

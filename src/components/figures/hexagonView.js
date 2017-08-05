@@ -20,7 +20,7 @@ import {
     Content
 } from 'native-base';
 
-class squareView extends Component {
+class hexagonView extends Component {
 
     openView(name, title) {
       this.props.navigator.push({
@@ -32,45 +32,35 @@ class squareView extends Component {
 
     render() {
         return (
-            <Container>
+            <Container style={{backgroundColor: '#F5FCFF'}}>
                 <Content>
                     <View style={styles.container}>
-                        <Image style={styles.image}  source={require('../../images/figures/square.png')} />
+                        <Image style={styles.image}  source={require('../../images/figures/hexagon.png')} />
                         <View style={styles.formulas}>
                         <Text style={[TYPO.paperFontDisplay1, COLOR.paperGrey900]}>Fórmulas</Text>   
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareAreaView', 'Área del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('hexagonAreaView', 'Área del hexágono')}>
                             <View style={styles. formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>l²</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>3 x l x ap</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squarePerimeterView', 'Perímetro del cuadrado')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('hexagonPerimeterView', 'Perímetro del hexágono')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>4 x l</Text>   
+                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>6 x l</Text>   
                             </View>   
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('squareDiagonalView', 'Diagonal del cuadrado')}>
-                            <View style={styles.formula}>
-                            <View style={{flex: 2}}>
-                                <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diagonal:</Text>   
-                            </View>
-                            <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√2  x l</Text>   
-                            </View>   
-                            </View>
-                        </TouchableHighlight>
                         </View>
                     </View>
                 </Content>
@@ -111,4 +101,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = squareView;
+module.exports = hexagonView;
