@@ -62,7 +62,7 @@ class ovalView extends Component {
                             </View>
                         </TouchableHighlight>
 
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('ovalDiagonalView', 'Diámetros del óvalo')}>
+                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('ovalDiameterView', 'Diámetros del óvalo')}>
                             <View style={styles.formula}>
                             <View style={{flex: 2}}>
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diámetro:</Text>   

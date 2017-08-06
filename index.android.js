@@ -58,6 +58,21 @@ const IsoscelesTriangleAltitudeView = require('./src/components/figures/formulas
 const ScaleneTriangleAreaView = require('./src/components/figures/formulas/triangle/scalene/scaleneTriangleAreaView');
 const ScaleneTrianglePerimeterView = require('./src/components/figures/formulas/triangle/scalene/scaleneTrianglePerimeterView');
 const ScaleneTriangleAltitudeView = require('./src/components/figures/formulas/triangle/scalene/scaleneTriangleAltitudeView');
+//rectangle
+const RectangleAreaView = require('./src/components/figures/formulas/rectangle/rectangleAreaView');
+const RectanglePerimeterView = require('./src/components/figures/formulas/rectangle/rectanglePerimeterView');
+const RectangleDiagonalView = require('./src/components/figures/formulas/rectangle/rectangleDiagonalView');
+//rhoumbus
+const RhombusAreaView = require('./src/components/figures/formulas/rhombus/rhombusAreaView');
+const RhombusPerimeterView = require('./src/components/figures/formulas/rhombus/rhombusPerimeterView');
+//oval
+const OvalAreaView = require('./src/components/figures/formulas/oval/ovalAreaView');
+const OvalDiameterView = require('./src/components/figures/formulas/oval/ovalDiameterView');
+const OvalPerimeterView = require('./src/components/figures/formulas/oval/ovalPerimeterView');
+
+
+
+
 
 //class
 export default class Geometriapp extends Component {
@@ -210,6 +225,38 @@ export default class Geometriapp extends Component {
       case 'HexagonView':
         return (
           <HexagonView {...route.props} navigator={navigator} route={route}></HexagonView>
+        );
+      case 'rectangleAreaView':
+        return (
+          <RectangleAreaView {...route.props} navigator={navigator} route={route}></RectangleAreaView>
+        );
+      case 'rectanglePerimeterView':
+        return (
+          <RectanglePerimeterView {...route.props} navigator={navigator} route={route}></RectanglePerimeterView>
+        );
+      case 'rectangleDiagonalView':
+        return (
+          <RectangleDiagonalView {...route.props} navigator={navigator} route={route}></RectangleDiagonalView>
+        );
+      case 'rhombusAreaView':
+        return (
+          <RhombusAreaView {...route.props} navigator={navigator} route={route}></RhombusAreaView>
+        );
+      case 'rhombusPerimeterView':
+        return (
+          <RhombusPerimeterView {...route.props} navigator={navigator} route={route}></RhombusPerimeterView>
+        );
+      case 'ovalAreaView':
+        return (
+          <OvalAreaView {...route.props} navigator={navigator} route={route}></OvalAreaView>
+        );
+      case 'ovalDiameterView':
+        return (
+          <OvalDiameterView {...route.props} navigator={navigator} route={route}></OvalDiameterView>
+        );
+      case 'ovalPerimeterView':
+        return (
+          <OvalPerimeterView {...route.props} navigator={navigator} route={route}></OvalPerimeterView>
         );
     }
   }
