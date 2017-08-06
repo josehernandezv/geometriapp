@@ -69,10 +69,18 @@ const RhombusPerimeterView = require('./src/components/figures/formulas/rhombus/
 const OvalAreaView = require('./src/components/figures/formulas/oval/ovalAreaView');
 const OvalDiameterView = require('./src/components/figures/formulas/oval/ovalDiameterView');
 const OvalPerimeterView = require('./src/components/figures/formulas/oval/ovalPerimeterView');
-
-
-
-
+//trapezoid
+const TrapezoidAreaView = require('./src/components/figures/formulas/trapezoid/trapezoidAreaView');
+const TrapezoidPerimeterView = require('./src/components/figures/formulas/trapezoid/trapezoidPerimeterView');
+//parallelogram
+const ParallelogramAreaView = require('./src/components/figures/formulas/parallelogram/parallelogramAreaView');
+const ParallelogramPerimeterView = require('./src/components/figures/formulas/parallelogram/parallelogramPerimeterView');
+//pentagon
+const PentagonAreaView = require('./src/components/figures/formulas/pentagon/pentagonAreaView');
+const PentagonPerimeterView = require('./src/components/figures/formulas/pentagon/pentagonPerimeterView');
+//hexagon
+const HexagonAreaView = require('./src/components/figures/formulas/hexagon/hexagonAreaView');
+const HexagonPerimeterView = require('./src/components/figures/formulas/hexagon/hexagonPerimeterView');
 
 //class
 export default class Geometriapp extends Component {
@@ -257,6 +265,38 @@ export default class Geometriapp extends Component {
       case 'ovalPerimeterView':
         return (
           <OvalPerimeterView {...route.props} navigator={navigator} route={route}></OvalPerimeterView>
+        );
+      case 'trapezoidAreaView':
+        return (
+          <TrapezoidAreaView {...route.props} navigator={navigator} route={route}></TrapezoidAreaView>
+        );
+      case 'trapezoidPerimeterView':
+        return (
+          <TrapezoidPerimeterView {...route.props} navigator={navigator} route={route}></TrapezoidPerimeterView>
+        );
+      case 'parallelogramAreaView':
+        return (
+          <ParallelogramAreaView {...route.props} navigator={navigator} route={route}></ParallelogramAreaView>
+        );
+      case 'parallelogramPerimeterView':
+        return (
+          <ParallelogramPerimeterView {...route.props} navigator={navigator} route={route}></ParallelogramPerimeterView>
+        );
+      case 'pentagonAreaView':
+        return (
+          <PentagonAreaView {...route.props} navigator={navigator} route={route}></PentagonAreaView>
+        );
+      case 'pentagonPerimeterView':
+        return (
+          <PentagonPerimeterView {...route.props} navigator={navigator} route={route}></PentagonPerimeterView>
+        );
+      case 'hexagonAreaView':
+        return (
+          <HexagonAreaView {...route.props} navigator={navigator} route={route}></HexagonAreaView>
+        );
+      case 'hexagonPerimeterView':
+        return (
+          <HexagonPerimeterView {...route.props} navigator={navigator} route={route}></HexagonPerimeterView>
         );
     }
   }
