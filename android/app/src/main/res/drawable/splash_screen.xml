@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@color/googleBlue"/>
+        android:drawable="@color/white"/>
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ucr_logo"/>
+            android:src="@drawable/so_logo"/>
     </item>
 </layer-list>

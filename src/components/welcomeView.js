@@ -22,24 +22,109 @@ class welcomeView extends Component {
           <View style={styles.container}>
           <Container>
                 <Content>
-                    <Card >
-                          <CardItem>
-                            <Body>
-                                <Image style={styles.cover} source={require('../images/labmate.jpg')} >
-                                  <View style={styles.coverContent}>
-                                    <Text style={[TYPO.paperFontTitle, COLOR.googleGrey100]}>LABORATORIO DE MATEMÁTICAS</Text>   
-                                  </View>
-                                </Image>
-
-                                <Text>
-                                    El Laboratorio de Matemáticas da la oportunidad a la comunidad de aprender matemáticas de una manera divertida y didáctica, por medio del juego que facilite una atmósfera de aprendizaje y enseñanza.
-                                </Text>
-                                <Button transparent onPress={() => this.visitPage()}>
-                                  <Text style={[TYPO.Button, COLOR.googleBlue500]} >Visitar página</Text>
-                                </Button>
-                            </Body>
+                    <Card>
+                        <CardItem header>
+                          <Text style={[TYPO.paperFontTitle, COLOR.paperBlueGrey800]}>Sobre Geometriapp</Text>   
                         </CardItem>
-                        
+                        <CardItem>
+                          <Body>
+                            <Text>
+                              Geometriapp es una aplicación móvil cuyo propósito es enseñar sobre los principios de la geometría. Fue desarrollada en la Universidad de Costa Rica, Sede de Occidente, como proyecto de TCU en el Laboratorio de Matemáticas.
+                            </Text>
+                          </Body>
+                        </CardItem>
+                    </Card>
+
+                    <Card>
+                      <CardItem cardBody>
+                          <Image source={require('../images/labmate.jpg')} style={{height: 150, width: null, flex: 1}}>
+                          {/*<Image style={styles.cover} source={require('../images/labmate.jpg')} >*/}
+                            <View style={styles.coverContent}>
+                              <Text style={[TYPO.paperFontTitle, COLOR.googleGrey100]}>LABORATORIO DE MATEMÁTICAS</Text>   
+                            </View>
+                          </Image>
+                      </CardItem>
+                      <CardItem>
+                          <Body>
+                            <Text>
+                                El Laboratorio de Matemáticas da la oportunidad a la comunidad de aprender matemáticas de una manera divertida y didáctica, por medio del juego que facilite una atmósfera de aprendizaje y enseñanza.
+                            </Text>
+                          </Body>                            
+                      </CardItem>
+                      <CardItem>
+                        <Left>
+                          <Button transparent onPress={() => Linking.openURL('http://www.so.ucr.ac.cr/laboratorio-de-matematicas')}>
+                            <Text style={[TYPO.Button, COLOR.googleBlue500]} >VISITAR PÁGINA</Text>
+                          </Button>
+                        </Left>
+                      </CardItem>
+                   </Card>
+                   
+                   <Card>
+                      <CardItem cardBody>
+                          <Image source={require('../images/tcu.jpg')} style={{height: 150, width: null, flex: 1}}>
+                          {/*<Image style={styles.cover} source={require('../images/labmate.jpg')} >*/}
+                            <View style={styles.coverContent}>
+                              <Text style={[TYPO.paperFontTitle, COLOR.googleGrey100]}>TRABAJO COMUNAL UNIVERSITARIO</Text>   
+                            </View>
+                          </Image>
+                      </CardItem>
+                      <CardItem>
+                          <Body>
+                            <Text>
+                                Es una actividad universitaria interdisciplinaria realizada por estudiantes y docentes, quienes interactúan con las comunidades de una manera dinámica y crítica de modo que contribuyen a la atención y resolución de los problemas concretos que sufre la sociedad costarricense.
+                            </Text>
+                          </Body>                            
+                      </CardItem>
+                      <CardItem>
+                        <Left>
+                          <Button transparent onPress={() => Linking.openURL('http://www.so.ucr.ac.cr/trabajo-comunal-universitario')}>
+                            <Text style={[TYPO.Button, COLOR.googleBlue500]} >VISITAR PÁGINA</Text>
+                          </Button>
+                        </Left>
+                      </CardItem>
+                   </Card>
+
+                   <Card>
+                      <CardItem cardBody>
+                          <Image source={require('../images/sede.jpg')} style={{height: 150, width: null, flex: 1}}>
+                          {/*<Image style={styles.cover} source={require('../images/labmate.jpg')} >*/}
+                            <View style={styles.coverContent}>
+                              <Text style={[TYPO.paperFontTitle, COLOR.googleGrey100]}>UNIVERSIDAD DE COSTA RICA SEDE DE OCCIDENTE</Text>   
+                              {/*<Text style={[TYPO.paperFontTitle, COLOR.googleGrey100]}></Text> */}
+                            </View>
+                          </Image>
+                      </CardItem>
+                      <CardItem>
+                          <Body>
+                            <Text>
+                              La Sede de Occidente, ubicada en San Ramón de Alajuela, a 59 km de San José, fue fundada en abril de 1968 y es la más desarrollada de la Universidad de Costa Rica. Cuenta con una población de más de 2820 estudiantes. La Sede de Occidente cuenta con los recintos de San Ramón y de Grecia.                              
+                            </Text>
+                          </Body>                            
+                      </CardItem>
+                      <CardItem>
+                        <Left>
+                          <Button transparent onPress={() => Linking.openURL('http://www.so.ucr.ac.cr/')}>
+                            <Text style={[TYPO.Button, COLOR.googleBlue500]} >VISITAR PÁGINA</Text>
+                          </Button>
+                        </Left>
+                      </CardItem>
+                   </Card>
+                      
+                   <Card>
+                     <CardItem>
+                        <Body>
+                          <Image source={require('../images/tcu_logo.png')} style={{height: 150, width: 150, alignSelf: "center" }}/>                          
+                        </Body>
+                      </CardItem>
+                   </Card>
+
+                   <Card>
+                     <CardItem>
+                        <Body>
+                          <Image source={require('../images/ucr_logo.png')} style={{height: 150, width: maxWith, alignSelf: "center" }}/>                          
+                        </Body>
+                      </CardItem>
                    </Card>
                 </Content>
             </Container>
@@ -49,7 +134,6 @@ class welcomeView extends Component {
 
     visitPage() {
       var url = 'http://www.so.ucr.ac.cr/laboratorio-de-matematicas';
-      // Linking.openURL(url).catch(err => console.error('An error occurred', err));
       Linking.openURL(url);
       
     }
@@ -61,6 +145,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop:70,
+    padding: 8,
     justifyContent: 'center',
     backgroundColor: '#F5FCFF',
   },
@@ -77,7 +162,7 @@ const styles = StyleSheet.create({
   coverContent: {
     alignSelf: 'stretch',
     paddingTop: 100,
-    paddingLeft: 5
+    paddingLeft: 16
   },
   cardMedia: {
     paddingLeft: 0

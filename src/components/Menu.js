@@ -58,11 +58,11 @@ const Data = [
     title: 'Rombo',
     icon: 'rhombus',
   },
-  {
-    view: 'OvalView',
-    title: 'Óvalo',
-    icon: 'oval',
-  },
+//   {
+//     view: 'OvalView',
+//     title: 'Óvalo',
+//     icon: 'oval',
+//   },
   {
     view: 'TrapezoidView',
     title: 'Trapecio',
@@ -70,12 +70,12 @@ const Data = [
   },
   {
     view: 'ParallelogramView',
-    title: 'Paralelograma',
+    title: 'Paralelogramo',
     icon: 'parallelogram',
   },
   {
     view: 'PentagonView',
-    title: 'Pentágono',
+    title: 'Pentágono Regular',
     icon: 'pentagon',
   },
   {
@@ -84,25 +84,10 @@ const Data = [
     icon: 'hexagon',
   },
   {
-    view: 'HeptagonView',
-    title: 'Heptágono',
+    view: 'PolygonView',
+    title: 'Polígonos regulares',
     icon: 'heptagon',
-  },
-  {
-    view: 'OctagonView',
-    title: 'Octágono',
-    icon: 'octagon',
-  },
-  {
-    view: 'NonagonView',
-    title: 'Nonágono',
-    icon: 'nonagon',
-  },
-  {
-    view: 'DecagonView',
-    title: 'Decágono',
-    icon: 'decagon',
-  },
+  }
 ];
 
 class Menu extends Component {

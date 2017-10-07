@@ -15,10 +15,8 @@ import {
     COLOR 
 } from 'react-native-material-design';
 
-import { 
-    Container,
-    Content
-} from 'native-base';
+import { Container, Content, Card, CardItem, Left, Body, Thumbnail, Button, Icon, Right, List, ListItem, Separator } from 'native-base';
+
 
 class trapezoidView extends Component {
 
@@ -32,38 +30,36 @@ class trapezoidView extends Component {
 
     render() {
         return (
-            <Container style={{backgroundColor: '#F5FCFF'}}>
+            <View style={styles.container}>
+              <Container>
                 <Content>
-                    <View style={styles.container}>
-                        <Image style={styles.image}  source={require('../../images/figures/trapezoid.png')} />
-                        <View style={styles.formulas}>
-                        <Text style={[TYPO.paperFontDisplay1, COLOR.paperGrey900]}>Fórmulas</Text>   
-
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('trapezoidAreaView', 'Área del trapecio')}>
-                            <View style={styles. formula}>
-                            <View style={{flex: 2}}>
-                                <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
-                            </View>
-                            <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>h x (a + b / 2)</Text>   
-                            </View>   
-                            </View>
-                        </TouchableHighlight>
-
-                        <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('trapezoidPerimeterView', 'Perímetro del trapecio')}>
-                            <View style={styles.formula}>
-                            <View style={{flex: 2}}>
-                                <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
-                            </View>
-                            <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>a + b + c + d</Text>   
-                            </View>   
-                            </View>
-                        </TouchableHighlight>
-                        </View>
-                    </View>
+                  <List>
+                    <ListItem itemHeader first>
+                      <Text>Seleccione una opción</Text>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('RectangleTrapezoidView', 'Trapecio Rectángulo')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/rectangleTrapezoid.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Trapecio Rectángulo</Text>
+                          {/*<Text note>Todos los lados miden lo mismo</Text>*/}
+                      </Body>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('IsoscelesTrapezoidView', 'Trapecio Isósceles')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/isoscelesTrapezoid.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Trapecio Isósceles</Text>
+                      </Body>
+                    </ListItem>
+                    <ListItem onPress={() => this.openView('ScaleneTrapezoidView', 'Trapecio Escaleno')}>
+                      <Thumbnail square size={100} style={StyleSheet.flatten(styles.thumbnail)} source={require('../../images/figures/scaleneTrapezoid.png')} />
+                      <Body>
+                          <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>Trapecio Escaleno</Text>
+                      </Body>
+                    </ListItem>
+                  </List>
                 </Content>
-            </Container>
+              </Container>
+            </View>
         );
     }
 };
@@ -71,32 +67,25 @@ class trapezoidView extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    padding: 40,
-    paddingTop: 90,
+    paddingTop:70,
     backgroundColor: '#F5FCFF',
   },
-  image: {
-    height: 200,
-    width: 300,
-    alignSelf: 'center'
+  thumbnail: {
+    height: 90,
+    width: 180,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+    marginRight: 10
   },
-  formulas:{
-    paddingTop: 30,
-    alignItems: 'flex-start',
-    flex: 1,
-    flexDirection: 'column'
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
   },
-  formula: {
-    paddingTop:30,
-    paddingBottom:10,
-    // flex:1,
-    alignSelf: 'center',    
-    // height: 150,
-    flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderBottomColor: '#eeeeee'
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
   }
 });
 
