@@ -70,7 +70,7 @@ const Data = [
   },
   {
     view: 'ParallelogramView',
-    title: 'Paralelogramo',
+    title: 'Romboide',
     icon: 'parallelogram',
   },
   {
@@ -80,7 +80,7 @@ const Data = [
   },
   {
     view: 'HexagonView',
-    title: 'Hexágono',
+    title: 'Hexágono Regular',
     icon: 'hexagon',
   },
   {
@@ -144,9 +144,9 @@ class Menu extends Component {
     render() {
         return (
             <Drawer theme='light' ref="drawer">
-                <Drawer.Header image={<Image source={require('./../images/header.jpg')} />}>
+                <Drawer.Header image={<Image source={require('./../images/material_bg2.jpg')}/>}>
                     <View style={styles.header}>
-                        <Text style={[ COLOR.paperBlueGrey800, TYPO.paperFontHeadline, styles.headline]}>Figuras Geométricas</Text>
+                        <Text style={[ COLOR.paperBlueGrey800, TYPO.paperFontHeadline, styles.headline]}>Geometriapp</Text>
                     </View>
                 </Drawer.Header>
                 {/*<List
@@ -159,6 +159,17 @@ class Menu extends Component {
                         </ListItem>}
                         
                     />*/}
+                    <ListItem button onPress={() => this.changeView('Welcome', 'Geometriapp')}>
+                        <Left>
+                            <IIcon name={'md-home'} size={24} style={this.getIconStyle('Welcome')}/>
+                            <Text style={[ this.getTextColor('Welcome'), TYPO.paperFontSubhead, styles.text]}>Inicio</Text>                                
+                        </Left>
+                    </ListItem>      
+                    <ListItem button noBorder>
+                        <Left>
+                            <Text style={[TYPO.paperFontSubhead, styles.title]}>Figuras geométricas</Text>                               
+                        </Left>
+                    </ListItem>
                 {Data.map((data) => 
                         <ListItem button noBorder key={data.view} onPress={() => this.changeView(data.view, data.title)} >
                             <Left>
@@ -210,12 +221,17 @@ const styles = StyleSheet.create({
     },
     headline: {
         marginTop: 20,
-        fontWeight: '600'
+        fontWeight: '600',
+        color: '#ffffff'
     },
     text: {
         // marginTop: 16,
         // marginBottom: 16,
         marginLeft: 30,
+        fontWeight: '600'
+    },
+    title: {
+        color: '#666666',
         fontWeight: '600'
     },
     row: {
@@ -237,7 +253,7 @@ const styles = StyleSheet.create({
         // marginLeft: 0
     }
     ,iconActive: {
-        color: "#4285f4",
+        color: "#41ADE7",
         // margin: 16,
         // marginLeft: 0
     }

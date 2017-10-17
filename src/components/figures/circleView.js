@@ -32,10 +32,10 @@ class circleView extends Component {
                   <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('circleAreaView', 'Área del círculo')}>
                     <View style={styles.formula}>
                       <View style={{flex: 2}}>
-                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
+                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>π x r²</Text>   
+                         <Image style={{height: 40, width: 100, resizeMode: 'contain'}} source={require('../../images/formulas/circle/area.png')} />                                  
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -43,10 +43,10 @@ class circleView extends Component {
                   <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('circlePerimeterView', 'Perímetro del círculo')}>
                     <View style={styles.formula}>
                       <View style={{flex: 2}}>
-                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
+                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>2 x π x r</Text>   
+                         <Image style={{height: 40, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/circle/perimeter.png')} />                                                          
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -54,10 +54,10 @@ class circleView extends Component {
                   <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('circleDiameterView', 'Diámetro del círculo')}>
                     <View style={styles.formula}>
                       <View style={{flex: 2}}>
-                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diámetro:</Text>   
+                        <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diámetro:</Text>
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>2 x r</Text>   
+                         <Image style={{height: 35, width: 100, resizeMode: 'contain'}} source={require('../../images/formulas/circle/diameter.png')} />                                                          
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,

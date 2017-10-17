@@ -35,7 +35,7 @@ class scaleneTriangleView extends Component {
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>(b x h) / 2</Text>   
+                         <Image style={{height: 60, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/triangle/isosceles/area.png')} />                                    
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -46,22 +46,21 @@ class scaleneTriangleView extends Component {
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>a + b + c</Text>   
+                        <Image style={{height: 30, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/triangle/scalene/perimeter.png')} />                                    
                       </View>   
                     </View>
                   </TouchableHighlight>
 
-                  <TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('scaleneTriangleAltitudeView', 'Altura del triángulo escaleno')}>
+                  {/*<TouchableHighlight underlayColor={'transparent'} onPress={() => this.openView('scaleneTriangleAltitudeView', 'Altura del triángulo escaleno')}>
                     <View style={styles.formula}>
                       <View style={{flex: 2}}>
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Altura:</Text>   
                       </View>
                       <View style={{flex: 3}}>
                         <Text style={[TYPO.paperFontSubhead, COLOR.paperGrey900]}>2/l x √(s(s-a)(s-b)(s-c))</Text>   
-                        {/*<Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>(a x c)/b</Text>   */}
                       </View>   
                     </View>
-                  </TouchableHighlight>
+                  </TouchableHighlight>*/}
                 </View>
             </View>
         );
@@ -75,7 +74,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,

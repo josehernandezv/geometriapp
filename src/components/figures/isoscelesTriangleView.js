@@ -11,6 +11,10 @@ import {
 } from 'react-native';
 
 import {  TYPO, COLOR } from 'react-native-material-design';
+import {
+  Content,
+  Container 
+} from 'native-base'
 
 class isoscelesTriangleView extends Component {
 
@@ -24,6 +28,8 @@ class isoscelesTriangleView extends Component {
 
     render() {
         return (
+          <Container style={{backgroundColor: '#FFFFFF'}}>
+                <Content>
             <View style={styles.container}>
                 <Image style={styles.image}  source={require('../../images/figures/isoscelesTriangle.png')} />
                 <View style={styles.formulas}>
@@ -35,7 +41,7 @@ class isoscelesTriangleView extends Component {
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>(b x h) / 2</Text>   
+                        <Image style={{height: 60, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/triangle/isosceles/area.png')} />                                    
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -46,7 +52,7 @@ class isoscelesTriangleView extends Component {
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>(2 x a) + b</Text>   
+                        <Image style={{height: 30, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/triangle/isosceles/perimeter.png')} />                                    
                       </View>   
                     </View>
                   </TouchableHighlight>
@@ -57,12 +63,14 @@ class isoscelesTriangleView extends Component {
                         <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Altura:</Text>   
                       </View>
                       <View style={{flex: 3}}>
-                        <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√(a² - b²/4)</Text>   
+                        <Image style={{height: 60, width: 100, resizeMode: 'contain'}} source={require('../../images/formulas/triangle/isosceles/altitude.png')} />                                    
                       </View>   
                     </View>
                   </TouchableHighlight>
                 </View>
             </View>
+            </Content>
+          </Container>
         );
     }
 };
@@ -74,7 +82,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,

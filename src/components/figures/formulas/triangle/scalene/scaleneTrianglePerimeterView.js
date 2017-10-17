@@ -121,8 +121,8 @@ class scaleneTrianglePerimeterView extends Component {
                             <Button 
                             onPress={() => this.calculate()}
                             block rounded 
-                            style={{backgroundColor:'#3399ff',marginTop: 30, marginBottom: 50}}>
-                                <Text style={{color:'#F5FCFF'}}>Calcular</Text>
+                            style={{backgroundColor:'#41ADE7',marginTop: 30, marginBottom: 50}}>
+                                <Text style={{color:'#ffffff'}}>Calcular</Text>
                             </Button>
                         </Form>
                         {this.getResultView()}
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 20,
     paddingTop: 70,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ffffff',
   },
 });
 

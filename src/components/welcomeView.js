@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     paddingTop:70,
     padding: 8,
     justifyContent: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ECECEC',
   },
   welcome: {
     fontSize: 20,

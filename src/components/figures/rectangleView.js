@@ -45,7 +45,7 @@ class rectangleView extends Component {
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>a x b</Text>   
+                                <Image style={{height: 30, width: 80, resizeMode: 'contain'}} source={require('../../images/formulas/rectangle/area.png')} />                                    
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -56,7 +56,7 @@ class rectangleView extends Component {
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>2 x (a + b)</Text>   
+                                <Image style={{height: 30, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/rectangle/perimeter.png')} />                                                                    
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -67,7 +67,7 @@ class rectangleView extends Component {
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Diagonal:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>√(a² + b²)</Text>   
+                                <Image style={{height: 40, width: 120, resizeMode: 'contain'}} source={require('../../images/formulas/rectangle/diagonal.png')} />                                                                    
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,

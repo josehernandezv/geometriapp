@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop:70,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   thumbnail: {
     height: 90,

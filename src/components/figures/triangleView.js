@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     paddingTop:70,
     // justifyContent: 'space-between',
     // alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   thumbnail: {
     height: 100,

@@ -12,28 +12,41 @@ import {
 } from 'react-native';
 
 
-import Onboarding from 'react-native-simple-onboarding';
+import Onboarding from 'react-native-onboarding-swiper';
+const Master = require('./master');
 
 
 class onBoardingView extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { 
+            Done: false
+        };
+    }
+
     render() {
-        maxWith = Dimensions.get('window').width;
+      if (this.state.Done) {
+        return (
+          <Master></Master>
+        );
+      }
         return (
           <Onboarding
             pages={[
-              { backgroundColor: '#fff', image: <Image source={require('../images/ic_launcher.png')}/>, title: 'Simple Messenger UI', subtitle: 'Implemented in React Native' },
-              { backgroundColor: "#fe6e58", image:<Image source={require('../images/ic_launcher.png')}/>, title: 'Welcome', subtitle: 'To Earth' },
-              { backgroundColor: "#999", image: <Image source={require('../images/ic_launcher.png')}/>, title: 'Also', subtitle: 'Mars is nice' },
+              { backgroundColor: '#fff', image: <Image source={require('../images/onBoarding/step0.png')} style={{height: 200, width: 200, resizeMode: 'contain'}}/>, title: 'Bienvenido a Geometriapp', subtitle: 'Una aplicación que te ayudará conocer los principios de la geometría y a calcular distintas fórmulas' },
+              { backgroundColor: '#fff', image: <Image source={require('../images/onBoarding/step1.png')} style={{height: 300, width: 200, resizeMode: 'contain'}}/>, title: 'Abre el menú', subtitle: 'Abre el menú para buscar la figura geométrica que deseas' },
+              { backgroundColor: '#fff', image: <Image source={require('../images/onBoarding/step2.png')} style={{height: 300, width: 200, resizeMode: 'contain'}}/>, title: 'Selecciona la figura', subtitle: 'Geometriapp cuenta con alrededor de 10 figuras seleccionables' },
+              { backgroundColor: '#fff', image: <Image source={require('../images/onBoarding/step3.png')} style={{height: 250, width: 250, resizeMode: 'contain'}}/>, title: 'Mira las fórmulas y notas importantes', subtitle: 'Cada figura cuenta con algunas fórmulas y notas, selecciona una fórmula si deseas usar su calculadora' },
+              { backgroundColor: '#fff', image: <Image source={require('../images/onBoarding/step4.png')} style={{height: 300, width: 200, resizeMode: 'contain'}}/>, title: 'Calcula fórmulas', subtitle: 'Ingresa los valores solicitados y podrás ver el resultado y procedimiento' },                                         
             ]}
-            
+            onEnd={this.done()}
           />
         );
     }
 
-    visitPage() {
-      var url = 'http://www.so.ucr.ac.cr/laboratorio-de-matematicas';
-      Linking.openURL(url);
-      
+    done() {
+      // this.setState({Done: true})
     }
 };
 

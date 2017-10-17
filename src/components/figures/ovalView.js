@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,

@@ -19,37 +19,16 @@ import {
 
 //general views
 const Master = require('./src/components/master');
+const OnBoarding = require('./src/components/onBoardingView');
 
 //class
 export default class Geometriapp extends Component {
 
   render() {
-  return (
-      <Master></Master>
-  )}
-}
+    return (
+        <OnBoarding></OnBoarding>
+    )}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  scene: {
-		flex: 1,
-		marginTop: 56
-	}
-});
+}
 
 AppRegistry.registerComponent('Geometriapp', () => Geometriapp);

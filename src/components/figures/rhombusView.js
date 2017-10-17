@@ -32,7 +32,7 @@ class rhombusView extends Component {
 
     render() {
         return (
-            <Container style={{backgroundColor: '#F5FCFF'}}>
+            <Container style={{backgroundColor: '#FFFFFF'}}>
                 <Content>
                     <View style={styles.container}>
                         <Image style={styles.image}  source={require('../../images/figures/rhombus.png')} />
@@ -45,7 +45,7 @@ class rhombusView extends Component {
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Área:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>(D x d) / 2</Text>   
+                                <Image style={{height: 60, width: 80, resizeMode: 'contain'}} source={require('../../images/formulas/rhombus/area.png')} />                                    
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -56,7 +56,7 @@ class rhombusView extends Component {
                                 <Text style={[TYPO.paperFontTitle, COLOR.googleBlue500]}>Perímetro:</Text>   
                             </View>
                             <View style={{flex: 3}}>
-                                <Text style={[TYPO.paperFontHeadline, COLOR.paperGrey900]}>4 x l</Text>   
+                                <Image style={{height: 30, width: 80, resizeMode: 'contain'}} source={require('../../images/formulas/rhombus/perimeter.png')} />                                                                      
                             </View>   
                             </View>
                         </TouchableHighlight>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     padding: 40,
     paddingTop: 90,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   image: {
     height: 200,
